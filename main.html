@@ -4,7 +4,18 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Jeu3D - BLITZKRIEG Studio • Première Soutenance</title>
+        <link rel="icon" type="image/png" href="assets/Logo_bk.png" />
         <link rel="stylesheet" href="styles.css" />
+        <script>
+            function ExportReport() {
+                const link = document.createElement('a');
+                link.href = 'assets/BLITZKRIEG.pdf';
+                link.download = 'BLITZKRIEG_Thesis_Report.pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        </script>
     </head>
     <body>
         <!-- Header Nav Bar -->
@@ -16,16 +27,16 @@
                     <a href="#core-elements">Core elements</a>
                     <a href="#gameplay">Gameplay</a>
                     <a href="#demonstrations">Demonstrations</a>
+                    <button id="Export_button" onclick="ExportReport()">Export Thesis Report</button>
                 </div>
             </nav>
         </header>
         <img src="assets/Logo_bk.png" alt="Logo">
         <!--First section , in this section we will introduce the project and its objectives-->
-        <section>
+        <section id="game-description">
             <h1>Game description</h1>
             <p class="subtitles">General presentation of the project</p>
             <section class="subsection">
-                
                 <p class="paragraph">
                     Blitzkrieg is a multiplayer arena fighting game designed for fast, strategic, and accessible matches. 
                     Players build a team of three characters with unique abilities and face off against other players or AIs on various maps. 
@@ -72,19 +83,60 @@
 
         <!-- Gameplay mechanics , features , fun factor -->
         <section id="gameplay">
-            <h1>Gameplay</h1>
-            <p class="subtitles">How a match works</p>
-            <section class="subsection">
-                <p class="paragraph">
-                When launching the game, the player accesses an intuitive menu to set up the match: choose the mode (local or online), number of players and AIs, select characters and the map. 
-                In-game, each player controls one active character but can switch at any time with one of their two backups. 
-                Battles are paced by the use of abilities with cooldowns, the application of statuses, and strategic team management. 
-                The last player with at least one character alive wins the match.
-            </p>
-            </section>
+            <h1>Gameplay & Interface</h1>
+            <p class="subtitles">How the Gameplay works</p>
+            <h3>Interface</h3>
+                <section class="subsection">
+                    <img src="assets/Menu_interface.png" alt="Interface" width="100%">
+                    <p class="paragraph">
+                        At the end the interface of the menu should look like this. <br>
+                        The interface is designed to be intuitive and user-friendly, 
+                        allowing players to easily navigate 
+                        through menus, select characters, and set up matches. <br>
+                        For now, this is just the design concept, for the first page of the menu, even not yet implemented in the game.
+                    </p>
+                </section>
+            <h3>Controls</h3>
+                <section class="subsection">
+                    <p class="paragraph">
+                        Actually in the gameplay phase, you have already choosen 3 characters for your team.
+                        Two of them are on a side line as backups, while one is active on the battlefield. 
+                        You can switch between your characters at any time to adapt to the situation. 
+                        Each character has four unique abilities, each with its own cooldown period. 
+                        You must use these abilities strategically, considering their effects, cooldowns, and potential synergies with statuses for win.
+                    </p> <br>
+                    <h3 style="margin-top: 1.5rem; margin-bottom: 1rem;">Controls</h3>
+                    <img src="assets/controls.png" alt="controls" width="100%">
+                    <ul class="controls-list">
+                        <li><strong>A / S / D keys:</strong> Activate the 3 abilities of the character on the battlefield</li>
+                        <li><strong>Q & W keys:</strong> Activate abilities of the characters on the side line</li>
+                        <li><strong>E + Q key:</strong> For switch between support number 1 and backup characters</li>
+                        <li><strong>E + W key:</strong> For switch between support number 2 and backup characters</li>
+                        <li><strong>Arrows key:</strong> Move the character on the battlefield</li>
+
+                    </ul>
+                    <p class="paragraph">
+                        When launching the game, the player accesses an intuitive menu to set up the match (the menu without any clean desgin for the moment): 
+                        choose the mode (local or online), number of players and AIs, select characters and the map. 
+                        In-game, each player controls one active character but can switch at any time with one of their two backups. 
+                        Battles are paced by the use of abilities with cooldowns, the application of statuses, and strategic team management. 
+                        The last player with at least one character alive wins the match.
+                    </p>
+                </section>
             
         </section>
-
+        
+        <!-- Demonstrations section -->
+        <section id="demonstrations">
+            <h1>Demonstrations</h1>
+            <p class="subtitles">Demonstrations of the code already done (respectively for the menu and for the displacement of the character)</p>
+            <section class="subsection">
+                <video src="assets/video_menu.mp4" width="100%" controls>
+                </video>
+                <video src="assets/video_deplacement.mp4" width="100%" controls>
+                </video>
+            </section>
+        </section>
 
         <footer>
             <p>BLITZKRIEG Studio • Projet Jeu3D – EPITA 2030 • September 2025 - May 2026</p>
