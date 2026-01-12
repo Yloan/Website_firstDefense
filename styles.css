@@ -1,0 +1,103 @@
+:root {
+    --primary: #2a9d8f;
+    --dark: #1a1a2e;
+    --light: #e0fbfc;
+    --accent: #e76f51;
+    --gray: #4a4e69;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:
+        system-ui,
+        -apple-system,
+        sans-serif;
+    height: 100vh;
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    color: #e0e0e0;
+    line-height: 1.6;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    padding: 2rem 5%;
+    margin-bottom: 2rem;
+
+    width: 50%;
+    margin: 50px;
+
+    background-color: var(--dark);
+    border: 1px solid rgba(42, 157, 143, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background: rgba(26, 26, 46, 0.85);
+    backdrop-filter: blur(8px);
+    padding: 1.5rem 5%;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(42, 157, 143, 0.3);
+}
+
+nav {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.nav-links a {
+    color: var(--light);
+    text-decoration: none;
+    margin-left: 2.2rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #777;
+    border-top: 1px solid #333;
+    margin-top: 4rem;
+}
+
+@media (max-width: 900px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+    nav {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .nav-links {
+        text-align: center;
+    }
+}
