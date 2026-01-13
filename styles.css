@@ -10,6 +10,7 @@
     --tertiary-shade: #b3e6a8;
 
     --brun: #f9aa48;
+    --brun-light: #9e351e;
 
     --dark: #140228;
     --light: #f0edff;
@@ -267,7 +268,7 @@ section {
     align-items: center; */
 
     background-color: var(--dark-shade);
-    border: 10px double var(--brun);
+    border: 10px double var(--brun-light);
     border-radius: 10px;
     box-shadow: 0 4px 8px #0000001a;
     transition: all 0.2s ease-in-out;
