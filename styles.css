@@ -268,10 +268,10 @@ section {
     width: 90%;
     margin: 50px;
     /* center the text */
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 
     background-color: var(--dark-shade);
     border: 10px double var(--brun-light);
