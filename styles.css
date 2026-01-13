@@ -57,6 +57,10 @@ h3 {
     color: var(--primary-shade);
 }
 
+.paragraph {
+    color: var(--light);
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -255,6 +259,8 @@ video {
     color: var(--light);
 }
 
+
+
 section {
     padding: 2rem 5%;
     margin-bottom: 2rem;
@@ -262,10 +268,10 @@ section {
     width: 90%;
     margin: 50px;
     /* center the text */
-    /* display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; */
+    align-items: center;
 
     background-color: var(--dark-shade);
     border: 10px double var(--brun-light);
